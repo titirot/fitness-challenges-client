@@ -1,0 +1,85 @@
+<div class="form-container">
+
+    @if (!isLoggedIn) {
+        <h2>התחברות לאתר 🔑</h2>
+        
+        <form #loginForm="ngForm" (ngSubmit)="signin()">
+            
+            <div class="form-row">
+                <label for="username">שם משתמש:</label>
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username"
+                        [(ngModel)]="user.username"
+                        required
+                        minlength="1"  
+                        maxlength="30" 
+                        #usernameInput="ngModel">
+                        
+                    @if (usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)) {
+                        <div class="validation-error-message">
+                            
+                            @if (usernameInput.errors?.['required']) {
+                                <small>חובה להכניס שם משתמש.</small>
+                            }
+                            
+                            @if (usernameInput.errors?.['minlength'] || usernameInput.errors?.['maxlength']) {
+                                <small>
+                                    אורך שם המשתמש חייב להיות בין 1 ל-30 תווים.
+                                </small>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="password">סיסמה:</label>
+                <div class="input-wrapper">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        [(ngModel)]="user.password"
+                        required
+                        minlength="3"  
+                        maxlength="10" 
+                        #passwordInput="ngModel">
+                        
+                    @if (passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)) {
+                        <div class="validation-error-message">
+                            
+                            @if (passwordInput.errors?.['required']) {
+                                <small>חובה להכניס סיסמה.</small>
+                            }
+                            
+                            @if (passwordInput.errors?.['minlength'] || passwordInput.errors?.['maxlength']) {
+                                <small>
+                                    אורך הסיסמה חייב להיות בין 3 ל-10 תווים.
+                                </small>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="!loginForm.form.valid">התחבר</button>
+        </form>
+    }
+    
+    @if (message) {
+        <div class="message">
+            {{ message }}
+        </div>
+    }
+
+    @if (isLoggedIn && currentUsername && !message.startsWith('התחברת בהצלחה!')) {
+        <div class="success-state">
+            <h3>🎉 ברוך הבא לאתר!</h3>
+            <p>הנך כבר מחובר, שלום {{ currentUsername }}</p> 
+            <p>אנו שמחים לראותך שוב.</p>
+        </div>
+    }
+</div>

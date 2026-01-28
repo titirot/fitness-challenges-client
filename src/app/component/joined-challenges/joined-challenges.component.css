@@ -1,0 +1,91 @@
+/* joined-challenges.component.css */
+
+/* ------------------ כללי ------------------ */
+
+.joined-challenges-container {
+    /* הגבלת רוחב למראה נקי יותר במרכז המסך */
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    /* כיווניות מימין לשמאל (RTL) עבור עברית */
+    direction: rtl; 
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #1abc9c; /* ירוק רענן - צבע שיכול להתאים לאתגרים והתקדמות */
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* ------------------ רשימת אתגרים ------------------ */
+
+.challenge-list {
+    list-style: none;
+    padding: 0;
+}
+
+.challenge-item {
+    /* נשתמש ב-Flexbox כדי ליישר דברים (גם אם כרגע יש רק קישור) */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    
+    /* מראה של כרטיס נקי */
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 12px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* צל עדין */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.challenge-item:hover {
+    /* אפקט ריחוף (Hover) לשיפור חוויית המשתמש */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.challenge-link {
+    /* הקישור הוא כל האזור של שם האתגר */
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 600; /* הדגשה יפה */
+    /* שימוש בפס ירוק קטן ליד שם האתגר */
+    border-right: 4px solid #1abc9c;
+    padding-right: 15px;
+    line-height: 1.4;
+}
+
+.challenge-name {
+    /* אם יש צורך בעיצוב נוסף לשם */
+    display: block; 
+}
+
+/* ------------------ הודעות סטטוס ------------------ */
+
+.error-message, .no-challenges-message {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+.error-message {
+    color: #D32F2F; /* אדום לשגיאה */
+    background-color: #FFEBEE;
+    border: 1px solid #FFCDD2;
+}
+
+.no-challenges-message {
+    color: #795548; /* צבע אדמה */
+    background-color: #FFFDE7;
+    border: 1px solid #FFF9C4;
+}

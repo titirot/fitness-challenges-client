@@ -1,0 +1,87 @@
+<div class="signup-container">
+  
+    @if (!isLoggedIn) {
+        <h2>הרשמה</h2>
+
+        <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+            
+                                                <label for="userName">שם משתמש:</label>
+            <input 
+                id="userName" 
+                name="username" 
+                [(ngModel)]="user.username" 
+                required 
+                minlength="1" 
+                maxlength="30"
+                #usernameControl="ngModel" />
+            
+            @if (usernameControl.invalid && usernameControl.touched) {
+                <div class="validation-error">
+                    @if (usernameControl.errors?.['required']) {
+                        <p>חובה להכניס שם משתמש.</p>
+                    }
+                    @if (usernameControl.errors?.['minlength'] || usernameControl.errors?.['maxlength']) {
+                        <p>אורך שם המשתמש חייב להיות בין 1 ל-30 תווים.</p>
+                    }
+                </div>
+            }
+
+            <label for="email">אימייל:</label>
+<input 
+    id="email" 
+    name="email" 
+    type="email" 
+    [(ngModel)]="user.email" 
+    required 
+    email 
+    #emailControl="ngModel" />
+            
+@if (emailControl.invalid && emailControl.touched) {
+    <div class="validation-error">
+        @if (emailControl.errors?.['required']) {
+            <p>חובה להכניס כתובת אימייל.</p>
+        }
+        @if (emailControl.errors?.['email']) {
+            <p>פורמט האימייל אינו תקין.</p>
+        }
+    </div>
+}
+
+                                                <label for="password">סיסמה:</label>
+            <input 
+                id="password" 
+                name="password" 
+                type="password" 
+                [(ngModel)]="user.password" 
+                required 
+                minlength="3" 
+                maxlength="10"
+                #passwordControl="ngModel" />
+            
+            @if (passwordControl.invalid && passwordControl.touched) {
+                <div class="validation-error">
+                    @if (passwordControl.errors?.['required']) {
+                        <p>חובה להכניס סיסמה.</p>
+                    }
+                    @if (passwordControl.errors?.['minlength'] || passwordControl.errors?.['maxlength']) {
+                        <p>אורך הסיסמה חייב להיות בין3 ל-10 תווים.</p>
+                    }
+                </div>
+            }
+
+                        <button type="submit" [disabled]="signupForm.invalid">הרשמה</button>
+        </form>
+        
+                @if (message && !isLoggedIn) {
+            <p class="message error-message">{{ message }}</p>
+        }
+        }
+
+        @if (isLoggedIn && currentUsername) {
+        <div class="success-state">
+        <h3>✅ אישור הרשמה וחיבור מערכת</h3>
+        
+            <p class="success-message">{{ message }}</p> 
+        </div>
+    }
+</div>

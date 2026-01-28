@@ -1,0 +1,112 @@
+/* --------------------------
+    Navbar הראשי
+    -------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* מרכז את כל התוכן */
+  background: #1A2330; /* כחול נייבי עמוק */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* צל עמוק יותר למראה רשמי */
+  
+  /* 💡 עדכון: הגדלת הרווח הפנימי כדי לתפוס יותר מקום אנכית */
+  padding: 15px 20px; 
+  
+  z-index: 1000;
+  direction: rtl;
+  flex-wrap: wrap; 
+  font-family: 'Heebo', Arial, sans-serif;
+}
+
+/* --------------------------
+    לוגו במרכז
+    -------------------------- */
+.logo {
+  /* 💡 עדכון: הגדלת גודל הלוגו */
+  font-size: 1.8rem;
+  
+  font-weight: 700;
+  color: #1abc9c;
+  text-align: center; 
+  white-space: nowrap; 
+  margin-bottom: 8px;
+  
+  flex-shrink: 0;
+}
+
+/* --------------------------
+    קישורי ניווט
+    -------------------------- */
+.nav-links {
+  display: flex;
+  justify-content: center; /* מרכז את הקישורים */
+  flex-wrap: wrap; 
+  gap: 16px; /* 💡 הגדלת הרווח בין קישורים */
+  overflow-x: auto; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 6px;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  
+  /* 💡 עדכון: הגדלת גודל הפונט של הקישורים */
+  font-size: 1.05rem; 
+  
+  font-weight: 500;
+  color: white;
+  padding: 8px 14px; /* 💡 הגדלת ה-padding לרווח סביב הטקסט */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #1abc9c;
+  background-color: #f7f7f7;
+}
+
+/* --------------------------
+    רווח מתחת ל-navbar
+    -------------------------- */
+body {
+  /* 💡 עדכון: הגדלת המרווח כדי להתאים לגובה החדש של ה-navbar (כ-95px) */
+  padding-top: 100px; 
+}
+
+/* --------------------------
+    מסכים קטנים
+    -------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 1.5rem; /* הותאם לגודל חדש */
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 1rem; /* הותאם לגודל חדש */
+    padding: 6px 12px;
+  }
+  
+  body {
+    padding-top: 100px; /* שמירה על מרווח גם במובייל */
+  }
+}

@@ -1,0 +1,47 @@
+<div class="uploaded-challenges-container">
+    <h1 class="component-title">אתגרים שיצרתי 🛠️</h1>
+
+    @if (loading) {
+        <div class="loading-state">
+            <p>טוען את האתגרים שנוצרו על ידיך...</p>
+        </div>
+    } @else if (error) {
+        <div class="error-state">
+            <p class="error-message">❌ {{ error }}</p>
+        </div>
+    } @else {
+        <div class="challenges-list">
+            
+            @for (challenge of uploadedChallenges$ | async; track challenge.id) {
+                <div class="challenge-card">
+                    
+                    <a [routerLink]="['/challenge', challenge.id]" class="card-overlay-link" title="{{ challenge.name }}"></a>
+                    
+                    <h4 class="challenge-name">
+                        {{ challenge.name }}
+                    </h4>
+                    
+                    <p class="challenge-description">
+                         {{ challenge.description | slice:0:100 }}...
+                    </p>
+                    
+                    <div class="challenge-stats">
+                        <span class="stat-item date">
+                            🗓️ העלאה: {{ challenge.date | date: 'dd/MM/yyyy' }}
+                        </span>
+                        
+                        <span class="stat-item likes">
+                            👍 {{ challenge.likeCount }}
+                        </span>
+                    </div>
+
+                </div>
+            } @empty {
+                <div class="empty-state">
+                    <p>עדיין לא העלית שום אתגר! 🤔</p>
+                    <a routerLink="/create-challenge" class="create-link">צור אתגר חדש עכשיו!</a>
+                </div>
+            }
+        </div>
+    }
+</div>

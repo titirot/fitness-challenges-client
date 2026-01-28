@@ -1,0 +1,21 @@
+<div class="joined-challenges-container">
+    <h2>🏆 האתגרים שהשתתפתי</h2>
+    
+    @if (isLoading) {
+        <p class="loading-message">טוען רשימת אתגרים... אנא המתן.</p>
+    } @else if (errorMessage) {
+        <p class="error-message">{{ errorMessage }}</p>
+    } @else if (joinedChallenges.length > 0) {
+        <ul class="challenge-list simple-list">
+            @for (challenge of joinedChallenges; track challenge.id) {
+                <li class="challenge-item row-display">
+                    <a [routerLink]="['/challenge', challenge.id]" class="challenge-link">
+                        <span class="challenge-name">{{ challenge.name }}</span>
+                    </a>
+                </li>
+            } 
+        </ul>
+    } @else {
+        <p class="no-challenges-message">😊 טרם הצטרפת לאף אתגר. קדימה לאתגר הבא!</p>
+    }
+</div>

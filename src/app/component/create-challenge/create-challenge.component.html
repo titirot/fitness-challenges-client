@@ -1,0 +1,117 @@
+<div class="challenge-form-container">
+    <h2>יצירת אתגר חדש 🎯</h2>
+
+    <form (ngSubmit)="onSubmit()" #challengeForm="ngForm">
+        
+        <div class="form-group">
+            <label for="name">שם האתגר:</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="newChallenge.name" 
+                required 
+                minlength="5" 
+                maxlength="100" 
+                #nameControl="ngModel">
+            
+            @if (nameControl.invalid && nameControl.touched) {
+                <div class="validation-error">
+                    @if (nameControl.errors?.['required']) {
+                        <p>שם האתגר הוא שדה חובה.</p>
+                    }
+                    @if (nameControl.errors?.['minlength']) {
+                        <p>שם האתגר חייב להיות לפחות 5 תווים.</p>
+                    }
+                    @if (nameControl.errors?.['maxlength']) {
+                        <p>שם האתגר יכול להיות עד 100 תווים.</p>
+                    }
+                </div>
+            }
+        </div>
+        
+        <div class="form-group">
+            <label for="description">תיאור:</label>
+            <textarea 
+                id="description" 
+                name="description" 
+                [(ngModel)]="newChallenge.description"
+                required
+                minlength="10" 
+                maxlength="1000000" 
+                #descriptionControl="ngModel"></textarea>
+
+            @if (descriptionControl.invalid && descriptionControl.touched) {
+                <div class="validation-error">
+                    @if (descriptionControl.errors?.['required']) {
+                        <p>תיאור האתגר הוא שדה חובה.</p>
+                    }
+                    @if (descriptionControl.errors?.['minlength']) {
+                        <p>התיאור חייב להיות לפחות 10 תווים.</p>
+                    }
+                    @if (descriptionControl.errors?.['maxlength']) {
+                        <p>התיאור יכול להיות עד 1000 תווים.</p>
+                    }
+                </div>
+            }
+        </div>
+        
+        <div class="form-group">
+            <label for="numOfDays">מספר ימים:</label>
+            <input 
+                type="number" 
+                id="numOfDays" 
+                name="numOfDays" 
+                [(ngModel)]="newChallenge.numOfDays"
+                required
+                min="1" 
+                max="60"
+                #daysControl="ngModel">
+            
+            @if (daysControl.invalid && daysControl.touched) {
+                <div class="validation-error">
+                    @if (daysControl.errors?.['required']) {
+                        <p>מספר הימים הוא שדה חובה.</p>
+                    }
+                    @if (daysControl.errors?.['min']) {
+                        <p>משך האתגר המינימלי הוא יום אחד.</p>
+                    }
+                    @if (daysControl.errors?.['max']) {
+                        <p>משך האתגר המקסימלי הוא 60 ימים.</p>
+                    }
+                </div>
+            }
+        </div>
+        
+        <div class="form-group file-upload-group">
+            <label>בחר תמונה :</label>
+
+            <input 
+                type="file" 
+                id="file-upload" 
+                name="fileInput" 
+                class="file-input-hidden"
+                (change)="onFileSelected($event)" 
+                accept="image/*">
+
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fas fa-camera"></i> בחר קובץ תמונה
+            </label>
+
+            <span class="file-name-display">
+                {{ selectedFile ? selectedFile.name : 'לא נבחר קובץ' }}
+            </span>
+        </div>
+
+        <button type="submit" [disabled]="uploading || challengeForm.invalid">
+            {{ uploading ? 'מעלה...' : 'צור אתגר' }}
+        </button>
+
+        @if (successMessage) {
+            <p class="success">{{ successMessage }}</p>
+        }
+        @if (errorMessage) {
+            <p class="error">{{ errorMessage }}</p>
+        }
+    </form>
+</div>
