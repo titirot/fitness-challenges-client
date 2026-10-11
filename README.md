@@ -1,35 +1,35 @@
-# 🏋️‍♂️ Health & Fitness Challenge Platform — Frontend
+# 🏋️‍♂️ AI-Powered Health & Fitness Challenge Platform — Frontend
 
-An interactive, responsive web application built with Angular 19 that allows users to create, discover, and participate in personalized health and fitness challenges.
+An advanced, interactive web application built with Angular 19, featuring full-stack challenge management and an integrated **AI Agent** to assist users with personalized fitness insights and recommendations.
 
-🔗 **Backend Repository:** [View Java Backend Code](https://github.com/titirot/project-java.git))
+🔗 **Backend Repository:** [https://github.com/titirot/project-java.git](https://github.com/titirot/project-java.git)
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Architecture
 
-- **Framework:** Angular 19
-- **Language:** TypeScript, HTML5, SCSS
-- **State & Router:** Angular Router
-- **HTTP Client:** Angular HttpClient (Integrated with JWT Auth Interceptors)
-- **Tooling:** Angular CLI, RxJS
+- **Frontend Framework:** Angular 19 (TypeScript, SCSS, RxJS)
+- **AI Integration:** Custom AI Agent embedded via API / Function calling for smart fitness interaction
+- **Security & State:** JWT (JSON Web Tokens) Authentication, Angular Interceptors & Routing
+- **UI & Experience:** Fully responsive modern dashboard and interactive components
 
 ---
 
 ## ✨ Key Features
 
-- **User Authentication:** Secure sign-up and login UI powered by JWT tokens.
-- **Challenge Dashboard:** Browse active health and fitness challenges with dynamic status badges.
-- **Interactive Progress Tracking:** Log daily activity and visualize progress towards goals.
-- **Responsive UI:** Tailored user interface for seamless viewing across devices.
+- **🧠 Smart AI Assistant:** Integrated AI agent providing real-time guidance, dynamic advice, and interactive chat capabilities directly within the fitness platform.
+- **🔐 Secure Authentication:** Robust sign-up and login workflow secured with JWT tokens.
+- **🏆 Challenge Management:** Discover, join, and track active health and fitness challenges seamlessly.
+- **📊 Interactive Progress Tracking:** Visual metrics and progress logs to keep participants motivated.
 
 ---
 
 ## 📸 Screenshots
 
-| Challenge Feed | Challenge Details |
+| Challenge Feed & Dashboard | AI Assistant / Challenge Details |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="Feed" width="100%" /> | <img src="https://github.com/user-attachments/assets/3f5c501d-b9c1-47a2-9b5f-3e8ee77cdce" alt="Details" width="100%" /> |
+| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="Feed" width="100%" /> | <img width="1810" height="862" alt="צילום מסך 2026-10-11 160359" src="https://github.com/user-attachments/assets/12a07d22-255f-463d-9d06-452dca504d02" />
+ |
 
 ---
 
@@ -43,15 +43,11 @@ An interactive, responsive web application built with Angular 19 that allows use
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/titirot/project-Angular.git](https://github.com/titirot/project-Angular.git)
-cd https://github.com/titirot/project-Angular.git
+git clone [https://github.com/titirot/project-java.git](https://github.com/titirot/project-java.git)
+cd project-java
 
 # 2. Install project dependencies
 npm install
 
 # 3. Run the development server
 ng serve
-
-# 4. Build for production
-ng build
-
