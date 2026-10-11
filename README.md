@@ -27,8 +27,6 @@ An interactive, responsive web application built with Angular 19 that allows use
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 ![App Screenshot](https://github.com/user-attachments/assets/9518e0c2-2297-46b4-bbd5-4f0b4a4e9da8)
 
 ---
