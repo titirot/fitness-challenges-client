@@ -26,8 +26,8 @@ An interactive, responsive web application built with Angular 19 that allows use
 ---
 
 ## 📸 Screenshots
-<img width="1051" height="507" alt="צילום מסך 2026-10-11 155225" src="https://github.com/user-attachments/assets/ba80aefb-c807-4db8-af82-eca4fa43e591" />
 
+![App Screenshot](https://github.com/user-attachments/assets/9518e0c2-2297-46b4-bbd5-4f0b4a4e9da8)
 
 ---
 
