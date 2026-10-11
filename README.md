@@ -27,11 +27,8 @@ An interactive, responsive web application built with Angular 19 that allows use
 
 ## 📸 Screenshots
 
-*(Drag and drop your app screenshots directly into this file on GitHub)*
+<img width="1051" height="512" alt="צילום מסך 2026-10-11 152336" src="https://github.com/user-attachments/assets/69891fbb-17b1-46d1-8757-fed420518d5d" />
 
-| Challenge Feed | Challenge Details |
-| :---: | :---: |
-| `![Feed](./screenshots/feed.png)` | `![Details](./screenshots/details.png)` |
 
 ---
 
@@ -57,4 +54,3 @@ ng serve
 # 4. Build for production
 ng build
 
-<img width="1869" height="816" alt="צילום מסך 2025-12-24 181547" src="https://github.com/user-attachments/assets/0eea54f2-9d61-478e-b197-3fbf0d9f87e1" />
