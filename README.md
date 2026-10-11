@@ -24,7 +24,6 @@ An advanced, interactive web application built with Angular 19, featuring full-s
 
 ---
 
-## 📸 Screenshots
 
 ## 📸 Screenshots
 
