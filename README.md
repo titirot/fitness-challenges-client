@@ -27,7 +27,9 @@ An interactive, responsive web application built with Angular 19 that allows use
 
 ## 📸 Screenshots
 
-![App Screenshot](https://github.com/user-attachments/assets/9518e0c2-2297-46b4-bbd5-4f0b4a4e9da8)
+| Challenge Feed | Challenge Details |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="Feed" width="100%" /> | <img src="https://github.com/user-attachments/assets/3f5c501d-b9c1-47a2-9b5f-3e8ee77cdce" alt="Details" width="100%" /> |
 
 ---
 
