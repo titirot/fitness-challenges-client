@@ -26,10 +26,11 @@ An advanced, interactive web application built with Angular 19, featuring full-s
 
 ## 📸 Screenshots
 
-| Challenge Feed & Dashboard | AI Assistant / Challenge Details |
+## 📸 Screenshots
+
+| User Profile & AI Chatbot | All Challenges & Challenge Details |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="Feed" width="100%" /> | <img width="1810" height="862" alt="צילום מסך 2026-10-11 160359" src="https://github.com/user-attachments/assets/12a07d22-255f-463d-9d06-452dca504d02" />
- |
+| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="User Profile & AI Chatbot" width="100%" /> | <img src="https://github.com/user-attachments/assets/3f5c501d-b9c1-47a2-9b5f-3e8ee77cdce" alt="Challenges & Details" width="100%" /> |
 
 ---
 
