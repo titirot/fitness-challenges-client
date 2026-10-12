@@ -24,9 +24,12 @@ An advanced, interactive web application built with Angular 19, featuring full-s
 
 ---
 
+
 ## 📸 Screenshots
 
-![User Profile & AI Chatbot](https://github.com/user-attachments/assets/a6219868-8fe8-4af1-96d6-4d088ce8d770)
+| User Profile & AI Chatbot | All Challenges & Challenge Details |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/b3173d05-d340-4479-98dc-50fbf7c016d9" alt="User Profile & AI Chatbot" width="100%" /> | <img width="1810" height="862" alt="צילום מסך 2026-10-11 160359" src="https://github.com/user-attachments/assets/b1b4094a-d7e7-4e63-aaaa-a77bbe9b1ae6" /> |
 
 ---
 
@@ -43,5 +46,9 @@ An advanced, interactive web application built with Angular 19, featuring full-s
 git clone [https://github.com/titirot/fitness-challenges-client.git](https://github.com/titirot/fitness-challenges-client.git)
 cd fitness-challenges-client
 
+# 2. Install project dependencies
+npm install
 
+# 3. Run the development server
+ng serve
 
