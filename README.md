@@ -43,8 +43,5 @@ An advanced, interactive web application built with Angular 19, featuring full-s
 git clone [https://github.com/titirot/fitness-challenges-client.git](https://github.com/titirot/fitness-challenges-client.git)
 cd fitness-challenges-client
 
-# 2. Install dependencies
-npm install
 
-# 3. Run the development server
-ng serve
+
